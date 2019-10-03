@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>RConverter</title>
+      <!-- Required meta tags always come first -->
+      <meta charset="utf-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+      <!-- Bootstrap CSS -->
+      <link
+         rel="stylesheet"
+         href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      />
+      <link rel="stylesheet" href="styles.css" />
+      <link
+         href="https://fonts.googleapis.com/css?family=Kanit|Muli&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+   </head>
+
+   <body>
+      <header>
+         <div class="jumbotron">
+            <h1>Converter</h1>
+            <p>
+               Convert Decimal to Binary to hexadecimal and loop over it.
+            </p>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-12 col-lg-3 blocks p-4 mb-2 mt-2">
+                  <p class="head">Decimal to Binary and Hexadecimal.</p>
+
+                  <div class="form-group">
+                     <label for="Decimal1">Decimal</label>
+                     <input
+                        type="number"
+                        class="form-control"
+                        id="Decimal1"
+                        placeholder="Enter Decimal Number"
+                     />
+                  </div>
+                  <button
+                     type="submit"
+                     class="btn btn-primary"
+                     onclick="dec_to_bin_hex()"
+                  >
+                     Convert
+                  </button>
+                  <br />
+                  <br />
+                  <div>
+                     <p>Binary:</p>
+                     <p id="Binary1">Result:</p>
+                  </div>
+                  <div>
+                     <p>Hexadecimal:</p>
+                     <p id="Hexadecimal1">Result:</p>
+                  </div>
+               </div>
+
+               <div class="col-12 col-lg-3 blocks offset-lg-1 p-4 mb-2 mt-2">
+                  <p class="head">Binary to Decimal and Hexadecimal.</p>
+                  <div class="form-group">
+                     <label for="Binary2">Binary</label>
+                     <input
+                        type="number"
+                        class="form-control"
+                        id="Binary2"
+                        placeholder="Enter Binary Number"
+                     />
+                  </div>
+                  <button
+                     type="submit"
+                     class="btn btn-primary"
+                     onclick="bin_to_dec_hex()"
+                  >
+                     Convert
+                  </button>
+                  <br />
+                  <br />
+                  <div>
+                     <p>Decimal:</p>
+                     <p id="Decimal2">Result:</p>
+                  </div>
+                  <div>
+                     <p>Hexadecimal:</p>
+                     <p id="Hexadecimal2">Result:</p>
+                  </div>
+               </div>
+
+               <div class="col-12 col-lg-3 blocks offset-lg-1 p-4 mb-2 mt-2">
+                  <p class="head">Hexadecimal to Decimal and Binary.</p>
+                  <div class="form-group">
+                     <label for="Hexadecimal3">Hexadecimal</label>
+                     <input
+                        class="form-control"
+                        id="Hexadecimal3"
+                        placeholder="Enter Hexadecimmal Number"
+                     />
+                  </div>
+                  <button
+                     type="submit"
+                     class="btn btn-primary"
+                     onclick="hex_to_dec_bin()"
+                  >
+                     Convert
+                  </button>
+                  <br />
+                  <br />
+                  <div>
+                     <p>Decimal:</p>
+                     <p id="Decimal3">Result:</p>
+                  </div>
+                  <div>
+                     <p>Binary:</p>
+                     <p id="Binary3">Result:</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div></div>
+         <div></div>
+      </header>
+
+      <footer class="footer">
+         <br />
+         <br />
+         <br />
+         <br />
+         <div class="container">
+            <div class="row">
+               <div class="col-12 col-sm-4">
+                  <div class="text-center">
+                     <a
+                        class="btn btn-social-icon btn-linkedin"
+                        href="https://www.linkedin.com/in/rishi-singh-b2226415b/"
+                        ><i class="fa fa-linkedin fa-lg"></i
+                     ></a>
+                     <a
+                        class="btn btn-social-icon btn-github"
+                        href="https://github.com/rishi-singh26"
+                        ><i class="fa fa-github fa-lg"></i
+                     ></a>
+                     <a
+                        class="btn btn-social-icon"
+                        href="mailto:rishi.singh24@yahoo.in"
+                        ><i class="fa fa-envelope-o fa-lg"></i
+                     ></a>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-12">
+                  <p>© Copyright 2019 Converter</p>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <script src="script.js"></script>
+      <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   </body>
+</html>

@@ -1,0 +1,16 @@
+.header {
+   background-image: linear-gradient(to right, #5964ff, #252a41);
+}
+
+h1 {
+   font-size: 50px;
+}
+
+.head {
+   font-size: 20px;
+}
+
+.blocks {
+   background-color: #cfcfcf;
+   border-radius: 20px;
+}
