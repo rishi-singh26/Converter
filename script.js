@@ -22,13 +22,21 @@ function bin_to_dec_hex() {
       .toUpperCase();
 }
 
+// if(inputText.value.match(mailformat))
+
 function hex_to_dec_bin() {
+   document.getElementById("hexerror").innerHTML = "";
    var hex = document.getElementById("Hexadecimal").value;
-   console.log(hex);
-   // Hex to Decmal
-   document.getElementById("Decimal").value = parseInt(hex, 16);
-   // Hex to Binary
-   document.getElementById("Binary").value = parseInt(hex, 16)
-      .toString(2)
-      .padStart(8, "0");
+   if (hex.match(/[0-9A-Fa-f]/)) {
+      console.log(hex);
+      // Hex to Decmal
+      document.getElementById("Decimal").value = parseInt(hex, 16);
+      // Hex to Binary
+      document.getElementById("Binary").value = parseInt(hex, 16)
+         .toString(2)
+         .padStart(8, "0");
+   } else {
+      document.getElementById("hexerror").innerHTML =
+         "<small>Please Enter a hexadecimal value</small>";
+   }
 }
