@@ -4,6 +4,8 @@ Converter allows its users to:
   - Convert Decimal to Binary nad Hexadecimal.
   - Convert Binary to Ddecimal and Hexadecimal.
   - Convert Hexadecimal to Binary and Decimal.
+  - Convert Text to binary.
+  - Convert Binary to text.
  
 
 # How to run
