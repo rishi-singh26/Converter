@@ -14,3 +14,7 @@ h1 {
    background-color: #cfcfcf;
    border-radius: 20px;
 }
+
+#hexerror {
+   color: red;
+}

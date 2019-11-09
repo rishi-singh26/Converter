@@ -94,6 +94,58 @@
                   </button>
                </div>
             </div>
+
+            <br /><br />
+            <!-- text to banary and binary to text part here -->
+            <div class="row">
+               <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks">
+                  <p class="head">Text to binary converter.</p>
+
+                  <div class="form-group">
+                     <label for="Text">Text</label>
+                     <input
+                        type="text"
+                        class="form-control"
+                        id="Text"
+                        placeholder="Enter Text"
+                     />
+                  </div>
+                  <!-- the result of the convrsion appears here -->
+                  <br />
+                  <p id="res1">Result Here</p>
+                  <br />
+                  <button
+                     type="submit"
+                     class="btn btn-primary"
+                     onclick="text_to_bin()"
+                  >
+                     Convert
+                  </button>
+                  <br />
+                  <br />
+                  <div class="form-group">
+                     <label for="Binary1">Binary</label>
+                     <input
+                        type="text"
+                        class="form-control"
+                        id="Binary1"
+                        placeholder="Enter Binary Number"
+                     />
+                  </div>
+                  <!-- the result of the convrsion appears here -->
+
+                  <br />
+                  <p id="res2">Result Here</p>
+                  <br />
+                  <button
+                     type="submit"
+                     class="btn btn-primary"
+                     onclick="bin_to_text()"
+                  >
+                     Convert
+                  </button>
+               </div>
+            </div>
          </div>
          <div></div>
          <div></div>

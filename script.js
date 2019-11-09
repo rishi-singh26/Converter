@@ -40,3 +40,33 @@ function hex_to_dec_bin() {
          "<small>Please Enter a hexadecimal value</small>";
    }
 }
+
+// text part here
+
+function text_to_bin() {
+   var input = document.getElementById("Text").value;
+   var output = document.getElementById("res1");
+   output.textContent = input
+      .split("")
+      .map(function(char) {
+         return char.charCodeAt(0).toString(2);
+      })
+      .join(" ");
+   console.log(
+      input
+         .split("")
+         .map(function(char) {
+            return char.charCodeAt(0).toString(2);
+         })
+         .join(" ")
+   );
+}
+function bin_to_text() {
+   var binString = "";
+   var output3 = document.getElementById("res2");
+   var input = document.getElementById("Binary1").value;
+   input.split(" ").map(function(bin) {
+      binString += String.fromCharCode(parseInt(bin, 2));
+   });
+   output3.textContent = binString;
+}
