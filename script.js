@@ -70,3 +70,52 @@ function bin_to_text() {
    });
    output3.textContent = binString;
 }
+
+// clicking enter button works as cicking the convert button here
+
+// for decimal textbar
+
+document.getElementById("Decimal").addEventListener("keyup", function(event) {
+   event.preventDefault();
+   if (event.keyCode === 13) {
+      document.getElementById("btn1").click();
+   }
+});
+
+// for binary textbar
+
+document.getElementById("Binary").addEventListener("keyup", function(event) {
+   event.preventDefault();
+   if (event.keyCode === 13) {
+      document.getElementById("btn2").click();
+   }
+});
+
+// for hexadecimal textbar
+
+document
+   .getElementById("Hexadecimal")
+   .addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+         document.getElementById("btn3").click();
+      }
+   });
+
+// for text to binary textbar
+
+document.getElementById("Text").addEventListener("keyup", function(event) {
+   event.preventDefault();
+   if (event.keyCode === 13) {
+      document.getElementById("btn4").click();
+   }
+});
+
+// for binary to text textbar
+
+document.getElementById("Binary1").addEventListener("keyup", function(event) {
+   event.preventDefault();
+   if (event.keyCode === 13) {
+      document.getElementById("btn5").click();
+   }
+});
