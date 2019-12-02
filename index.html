@@ -1,200 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>Converter</title>
-      <!-- Required meta tags always come first -->
-      <meta charset="utf-8" />
-      <meta
-         name="viewport"
-         content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
-      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <head>
+    <title>Converter</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-      <!-- Bootstrap CSS -->
-      <link
-         rel="stylesheet"
-         href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-      />
-      <link rel="stylesheet" href="styles.css" />
-      <link
-         href="https://fonts.googleapis.com/css?family=Kanit|Muli&display=swap"
-         rel="stylesheet"
-      />
-      <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-   </head>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kanit|Muli&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-   <body>
-      <header>
-         <div class="jumbotron">
-            <h1>Converter</h1>
-            <p>
-               Convert Decimal to Binary to hexadecimal and loop over it.
-            </p>
-         </div>
-         <div class="container">
-            <div class="row">
-               <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks">
-                  <p class="head">Decimal to Binary and Hexadecimal.</p>
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1>Converter</h1>
+        <p>
+          Convert Decimal to Binary to hexadecimal and loop over it.
+        </p>
+      </div>
+      <div class="container">
+        <!-- decimal to binary t.o hexadecimal part here -->
 
-                  <div class="form-group">
-                     <label for="Decimal">Decimal</label>
-                     <input
-                        type="number"
-                        class="form-control"
-                        id="Decimal"
-                        placeholder="Enter Decimal Number"
-                     />
-                  </div>
-                  <button
-                     type="submit"
-                     class="btn btn-primary"
-                     onclick="dec_to_bin_hex()"
-                     id="btn1"
-                  >
-                     Convert
-                  </button>
-                  <br />
-                  <br />
-                  <div class="form-group">
-                     <label for="Binary">Binary</label>
-                     <input
-                        type="number"
-                        class="form-control"
-                        id="Binary"
-                        placeholder="Enter Binary Number"
-                     />
-                  </div>
-                  <button
-                     type="submit"
-                     class="btn btn-primary"
-                     onclick="bin_to_dec_hex()"
-                     id="btn2"
-                  >
-                     Convert
-                  </button>
-                  <br />
-                  <br />
-                  <div class="form-group">
-                     <label for="Hexadecimal">Hexadecimal</label>
-                     <input
-                        type="text"
-                        class="form-control"
-                        id="Hexadecimal"
-                        placeholder="Enter Hexadecimal Number"
-                     />
-                  </div>
-                  <p id="hexerror"><small></small></p>
-                  <button
-                     type="submit"
-                     class="btn btn-primary"
-                     onclick="hex_to_dec_bin()"
-                     id="btn3"
-                  >
-                     Convert
-                  </button>
-               </div>
+        <div class="row">
+          <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks">
+            <p class="head">Decimal to Binary and Hexadecimal.</p>
+
+            <div class="form-group">
+              <label for="Decimal">Decimal</label>
+              <input
+                type="number"
+                class="form-control"
+                id="Decimal"
+                placeholder="Enter Decimal Number"
+              />
             </div>
-
-            <br /><br />
-            <!-- text to banary and binary to text part here -->
-            <div class="row">
-               <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks">
-                  <p class="head">Text to binary converter.</p>
-
-                  <div class="form-group">
-                     <label for="Text">Text</label>
-                     <input
-                        type="text"
-                        class="form-control"
-                        id="Text"
-                        placeholder="Enter Text"
-                     />
-                  </div>
-                  <!-- the result of the convrsion appears here -->
-                  <br />
-                  <p id="res1">Result Here</p>
-                  <br />
-                  <button
-                     type="submit"
-                     class="btn btn-primary"
-                     onclick="text_to_bin()"
-                     id="btn4"
-                  >
-                     Convert
-                  </button>
-                  <br />
-                  <br />
-                  <div class="form-group">
-                     <label for="Binary1">Binary</label>
-                     <input
-                        type="text"
-                        class="form-control"
-                        id="Binary1"
-                        placeholder="Enter Binary Number"
-                     />
-                  </div>
-                  <!-- the result of the convrsion appears here -->
-
-                  <br />
-                  <p id="res2">Result Here</p>
-                  <br />
-                  <button
-                     type="submit"
-                     class="btn btn-primary"
-                     onclick="bin_to_text()"
-                     id="btn5"
-                  >
-                     Convert
-                  </button>
-               </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="dec_to_bin_hex()"
+              id="btn1"
+            >
+              Convert
+            </button>
+            <br />
+            <br />
+            <div class="form-group">
+              <label for="Binary">Binary</label>
+              <input
+                type="number"
+                class="form-control"
+                id="Binary"
+                placeholder="Enter Binary Number"
+              />
             </div>
-         </div>
-         <div></div>
-         <div></div>
-      </header>
-
-      <footer class="footer">
-         <br />
-         <br />
-         <br />
-         <br />
-         <div class="container">
-            <div class="row">
-               <div class="col-12 col-sm-4">
-                  <div class="text-center">
-                     <a
-                        class="btn btn-social-icon btn-linkedin"
-                        href="https://www.linkedin.com/in/rishi-singh-b2226415b/"
-                        ><i class="fa fa-linkedin fa-lg"></i
-                     ></a>
-                     <a
-                        class="btn btn-social-icon btn-github"
-                        href="https://github.com/rishi-singh26"
-                        ><i class="fa fa-github fa-lg"></i
-                     ></a>
-                     <a
-                        class="btn btn-social-icon"
-                        href="mailto:rishi.singh24@yahoo.in"
-                        ><i class="fa fa-envelope-o fa-lg"></i
-                     ></a>
-                  </div>
-               </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="bin_to_dec_hex()"
+              id="btn2"
+            >
+              Convert
+            </button>
+            <br />
+            <br />
+            <div class="form-group">
+              <label for="Hexadecimal">Hexadecimal</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Hexadecimal"
+                placeholder="Enter Hexadecimal Number"
+              />
             </div>
-            <div class="row">
-               <div class="col-12">
-                  <p>© Copyright 2019 Converter</p>
-               </div>
-            </div>
-         </div>
-      </footer>
+            <p id="hexerror"><small></small></p>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="hex_to_dec_bin()"
+              id="btn3"
+            >
+              Convert
+            </button>
+          </div>
+        </div>
 
-      <script src="script.js"></script>
-      <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-   </body>
+        <br /><br />
+
+        <!-- text to banary and binary to text part here -->
+
+        <div class="row">
+          <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks">
+            <p class="head">Text to binary converter.</p>
+
+            <div class="form-group">
+              <label for="Text">Text</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Text"
+                placeholder="Enter Text"
+              />
+            </div>
+            <!-- the result of the convrsion appears here -->
+            <br />
+            <p id="res1">Result Here</p>
+            <br />
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="text_to_bin()"
+              id="btn4"
+            >
+              Convert
+            </button>
+            <br />
+            <br />
+            <div class="form-group">
+              <label for="Binary1">Binary</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Binary1"
+                placeholder="Enter Binary Number"
+              />
+            </div>
+            <!-- the result of the convrsion appears here -->
+
+            <br />
+            <p id="res2">Result Here</p>
+            <br />
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="bin_to_text()"
+              id="btn5"
+            >
+              Convert
+            </button>
+          </div>
+        </div>
+
+        <br />
+        <br />
+
+        <!-- alphabets to phonetic alphabets converter here -->
+
+        <div class="row">
+          <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks">
+            <p class="head">Alphabets to NATO Phonetic alphabets converter.</p>
+
+            <div class="form-group">
+              <label for="alphabet">Text</label>
+              <input
+                type="text"
+                class="form-control"
+                id="alphabet"
+                placeholder="Enter Text"
+              />
+            </div>
+            <!-- the result of the convrsion appears here -->
+            <br />
+            <p id="textToPhoneticRes">Result Here</p>
+            <br />
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="textToPhonetic()"
+              id="btn6"
+            >
+              Convert
+            </button>
+            <br />
+            <br />
+            <div class="form-group">
+              <label for="phoneticToText">Nato Phonetic Text</label>
+              <input
+                type="text"
+                class="form-control"
+                id="phoneticToText"
+                placeholder="Enter Phonetic Text"
+              />
+            </div>
+            <!-- the result of the convrsion appears here -->
+
+            <br />
+            <p id="phoneticToTextRes">Result Here</p>
+            <br />
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="phoneticToText()"
+              id="btn7"
+            >
+              Convert
+            </button>
+          </div>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div></div>
+      <div></div>
+    </header>
+
+    <footer class="footer">
+      <br />
+      <br />
+      <br />
+      <br />
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-4">
+            <div class="text-center">
+              <a
+                class="btn btn-social-icon btn-linkedin"
+                href="https://www.linkedin.com/in/rishi-singh-b2226415b/"
+                ><i class="fa fa-linkedin fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-github"
+                href="https://github.com/rishi-singh26"
+                ><i class="fa fa-github fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon"
+                href="mailto:rishi.singh24@yahoo.in"
+                ><i class="fa fa-envelope-o fa-lg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p>© Copyright 2019 Converter</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
