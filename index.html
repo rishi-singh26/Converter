@@ -27,6 +27,33 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <a class="navbar-brand" href="#"><a class="navbar-brand mr-auto" href="#"><img src="img/small-logo.png" height="30" width="41"></a></a> -->
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#1">Decimal to binary to hexadecimal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#2">Text to Binary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#3">Text to Phonetic text</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <header>
       <div class="jumbotron">
         <h1>Converter</h1>
@@ -38,7 +65,10 @@
         <!-- decimal to binary t.o hexadecimal part here -->
 
         <div class="row">
-          <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks">
+          <div
+            class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks"
+            id="1"
+          >
             <p class="head">Decimal to Binary and Hexadecimal.</p>
 
             <div class="form-group">
@@ -105,7 +135,10 @@
         <!-- text to banary and binary to text part here -->
 
         <div class="row">
-          <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks">
+          <div
+            class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks"
+            id="2"
+          >
             <p class="head">Text to binary converter.</p>
 
             <div class="form-group">
@@ -162,8 +195,13 @@
         <!-- alphabets to phonetic alphabets converter here -->
 
         <div class="row">
-          <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks">
-            <p class="head">Alphabets to NATO Phonetic alphabets converter.</p>
+          <div
+            class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks"
+            id="3"
+          >
+            <p class="head">
+              Alphabets to NATO Phonetic alphabets converter.
+            </p>
 
             <div class="form-group">
               <label for="alphabet">Text</label>
