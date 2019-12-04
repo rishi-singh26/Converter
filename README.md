@@ -9,6 +9,8 @@ Converter allows its users to:
 - Convert Binary to text.
 - Convert Normal text to Phonetic Text using NATO System
 - Convert Phonetic text to normal alphabets
+- Convert english to morse code
+- Convert morse code to english
 
 # How to run
 
