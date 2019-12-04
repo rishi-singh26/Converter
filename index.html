@@ -49,6 +49,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#3">Text to Phonetic text</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#4">Alphabet to Morse code</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -61,201 +64,257 @@
           Convert Decimal to Binary to hexadecimal and loop over it.
         </p>
       </div>
-      <div class="container">
-        <!-- decimal to binary t.o hexadecimal part here -->
-
-        <div class="row">
-          <div
-            class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks"
-            id="1"
-          >
-            <p class="head">Decimal to Binary and Hexadecimal.</p>
-
-            <div class="form-group">
-              <label for="Decimal">Decimal</label>
-              <input
-                type="number"
-                class="form-control"
-                id="Decimal"
-                placeholder="Enter Decimal Number"
-              />
-            </div>
-            <button
-              type="submit"
-              class="btn btn-primary"
-              onclick="dec_to_bin_hex()"
-              id="btn1"
-            >
-              Convert
-            </button>
-            <br />
-            <br />
-            <div class="form-group">
-              <label for="Binary">Binary</label>
-              <input
-                type="number"
-                class="form-control"
-                id="Binary"
-                placeholder="Enter Binary Number"
-              />
-            </div>
-            <button
-              type="submit"
-              class="btn btn-primary"
-              onclick="bin_to_dec_hex()"
-              id="btn2"
-            >
-              Convert
-            </button>
-            <br />
-            <br />
-            <div class="form-group">
-              <label for="Hexadecimal">Hexadecimal</label>
-              <input
-                type="text"
-                class="form-control"
-                id="Hexadecimal"
-                placeholder="Enter Hexadecimal Number"
-              />
-            </div>
-            <p id="hexerror"><small></small></p>
-            <button
-              type="submit"
-              class="btn btn-primary"
-              onclick="hex_to_dec_bin()"
-              id="btn3"
-            >
-              Convert
-            </button>
-          </div>
-        </div>
-
-        <br /><br />
-
-        <!-- text to banary and binary to text part here -->
-
-        <div class="row">
-          <div
-            class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks"
-            id="2"
-          >
-            <p class="head">Text to binary converter.</p>
-
-            <div class="form-group">
-              <label for="Text">Text</label>
-              <input
-                type="text"
-                class="form-control"
-                id="Text"
-                placeholder="Enter Text"
-              />
-            </div>
-            <!-- the result of the convrsion appears here -->
-            <br />
-            <p id="res1">Result Here</p>
-            <br />
-            <button
-              type="submit"
-              class="btn btn-primary"
-              onclick="text_to_bin()"
-              id="btn4"
-            >
-              Convert
-            </button>
-            <br />
-            <br />
-            <div class="form-group">
-              <label for="Binary1">Binary</label>
-              <input
-                type="text"
-                class="form-control"
-                id="Binary1"
-                placeholder="Enter Binary Number"
-              />
-            </div>
-            <!-- the result of the convrsion appears here -->
-
-            <br />
-            <p id="res2">Result Here</p>
-            <br />
-            <button
-              type="submit"
-              class="btn btn-primary"
-              onclick="bin_to_text()"
-              id="btn5"
-            >
-              Convert
-            </button>
-          </div>
-        </div>
-
-        <br />
-        <br />
-
-        <!-- alphabets to phonetic alphabets converter here -->
-
-        <div class="row">
-          <div
-            class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks"
-            id="3"
-          >
-            <p class="head">
-              Alphabets to NATO Phonetic alphabets converter.
-            </p>
-
-            <div class="form-group">
-              <label for="alphabet">Text</label>
-              <input
-                type="text"
-                class="form-control"
-                id="alphabet"
-                placeholder="Enter Text"
-              />
-            </div>
-            <!-- the result of the convrsion appears here -->
-            <br />
-            <p id="textToPhoneticRes">Result Here</p>
-            <br />
-            <button
-              type="submit"
-              class="btn btn-primary"
-              onclick="textToPhonetic()"
-              id="btn6"
-            >
-              Convert
-            </button>
-            <br />
-            <br />
-            <div class="form-group">
-              <label for="phoneticToText">Nato Phonetic Text</label>
-              <input
-                type="text"
-                class="form-control"
-                id="phoneticToText"
-                placeholder="Enter Phonetic Text"
-              />
-            </div>
-            <!-- the result of the convrsion appears here -->
-
-            <br />
-            <p id="phoneticToTextRes">Result Here</p>
-            <br />
-            <button
-              type="submit"
-              class="btn btn-primary"
-              onclick="phoneticToText()"
-              id="btn7"
-            >
-              Convert
-            </button>
-          </div>
-        </div>
-        <br />
-        <br />
-      </div>
-      <div></div>
-      <div></div>
     </header>
+
+    <div class="container">
+      <!-- <div class="row d-none d-lg-block">
+        <div class="sidenav">
+          <a class="nav-link" href="#1">Decimal to binary to hexadecimal</a>
+          <a class="nav-link" href="#2">Text to Binary</a>
+          <a class="nav-link" href="#3">Text to Phonetic text</a>
+          <a class="nav-link" href="#4">Alphabet to Morse code</a>
+        </div>
+      </div> -->
+      <!-- decimal to binary t.o hexadecimal part here -->
+
+      <div class="row">
+        <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks" id="1">
+          <p class="head">Decimal to Binary and Hexadecimal.</p>
+
+          <div class="form-group">
+            <label for="Decimal">Decimal</label>
+            <input
+              type="number"
+              class="form-control"
+              id="Decimal"
+              placeholder="Enter Decimal Number"
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            onclick="dec_to_bin_hex()"
+            id="btn1"
+          >
+            Convert
+          </button>
+          <br />
+          <br />
+          <div class="form-group">
+            <label for="Binary">Binary</label>
+            <input
+              type="number"
+              class="form-control"
+              id="Binary"
+              placeholder="Enter Binary Number"
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            onclick="bin_to_dec_hex()"
+            id="btn2"
+          >
+            Convert
+          </button>
+          <br />
+          <br />
+          <div class="form-group">
+            <label for="Hexadecimal">Hexadecimal</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Hexadecimal"
+              placeholder="Enter Hexadecimal Number"
+            />
+          </div>
+          <p id="hexerror"><small></small></p>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            onclick="hex_to_dec_bin()"
+            id="btn3"
+          >
+            Convert
+          </button>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <!-- text to banary and binary to text part here -->
+
+      <div class="row">
+        <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks" id="2">
+          <p class="head">Text to binary converter.</p>
+
+          <div class="form-group">
+            <label for="Text">Text</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Text"
+              placeholder="Enter Text"
+            />
+          </div>
+          <!-- the result of the convrsion appears here -->
+          <br />
+          <p id="res1">Result Here</p>
+          <br />
+          <button
+            type="submit"
+            class="btn btn-primary"
+            onclick="text_to_bin()"
+            id="btn4"
+          >
+            Convert
+          </button>
+          <br />
+          <br />
+          <div class="form-group">
+            <label for="Binary1">Binary</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Binary1"
+              placeholder="Enter Binary Number"
+            />
+          </div>
+          <!-- the result of the convrsion appears here -->
+
+          <br />
+          <p id="res2">Result Here</p>
+          <br />
+          <button
+            type="submit"
+            class="btn btn-primary"
+            onclick="bin_to_text()"
+            id="btn5"
+          >
+            Convert
+          </button>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <!-- alphabets to phonetic alphabets converter here -->
+
+      <div class="row">
+        <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks" id="3">
+          <p class="head">
+            Alphabets to NATO Phonetic alphabets converter.
+          </p>
+
+          <div class="form-group">
+            <label for="alphabet">Text</label>
+            <input
+              type="text"
+              class="form-control"
+              id="alphabet"
+              placeholder="Enter Text"
+            />
+          </div>
+          <!-- the result of the convrsion appears here -->
+          <br />
+          <p id="textToPhoneticRes">Result Here</p>
+          <br />
+          <button
+            type="submit"
+            class="btn btn-primary"
+            onclick="textToPhonetic()"
+            id="btn6"
+          >
+            Convert
+          </button>
+          <br />
+          <br />
+          <div class="form-group">
+            <label for="phoneticToText">Nato Phonetic Text</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phoneticToText"
+              placeholder="Enter Phonetic Text"
+            />
+          </div>
+          <!-- the result of the convrsion appears here -->
+
+          <br />
+          <p id="phoneticToTextRes">Result Here</p>
+          <br />
+          <button
+            type="submit"
+            class="btn btn-primary"
+            onclick="phoneticToText()"
+            id="btn7"
+          >
+            Convert
+          </button>
+        </div>
+      </div>
+      <br />
+      <br />
+
+      <!-- English to morse code converter -->
+
+      <div class="row">
+        <div class="col-11 col-md-7 col-lg-9 p-5 ml-auto mr-auto blocks" id="4">
+          <p class="head">
+            English to Morse code converter.
+          </p>
+
+          <div class="form-group">
+            <label for="english">Text</label>
+            <input
+              type="text"
+              class="form-control"
+              id="english"
+              placeholder="Enter Text in English"
+            />
+          </div>
+          <!-- the result of the convrsion appears here -->
+          <br />
+          <p id="enflishToMorse">Result Here</p>
+          <br />
+          <button
+            type="submit"
+            class="btn btn-primary"
+            onclick="englishToMorse()"
+            id="btn8"
+          >
+            Convert
+          </button>
+          <br />
+          <br />
+          <div class="form-group">
+            <label for="morse">Morse to English</label>
+            <input
+              type="text"
+              class="form-control"
+              id="morse"
+              placeholder="Enter Morse Code"
+            />
+          </div>
+          <!-- the result of the convrsion appears here -->
+
+          <br />
+          <p id="morseToEnglish">Result Here</p>
+          <br />
+          <button
+            type="submit"
+            class="btn btn-primary"
+            onclick="morseToEnglish()"
+            id="btn9"
+          >
+            Convert
+          </button>
+        </div>
+      </div>
+    </div>
+    <div></div>
+    <div></div>
 
     <footer class="footer">
       <br />
